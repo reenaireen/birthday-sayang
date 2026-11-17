@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f9dce7">
+  <title>A Little Surprise for You ♡</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- FIRST PAGE: envelope welcome screen -->
+  <main id="welcome" class="welcome-screen">
+    <div class="welcome-decor decor-heart heart-one">♡</div>
+    <div class="welcome-decor decor-heart heart-two">♡</div>
+    <div class="welcome-decor sparkle sparkle-one">✧</div>
+    <div class="welcome-decor sparkle sparkle-two">✦</div>
+
+    <div class="welcome-content">
+      <p class="eyebrow">A LITTLE SOMETHING, JUST FOR YOU</p>
+      <button class="envelope-button" id="openEnvelope" aria-label="Open your birthday letter">
+        <span class="envelope">
+          <span class="envelope-back"></span>
+          <span class="envelope-letter"><span>for you</span> ♡</span>
+          <span class="envelope-front"></span>
+          <span class="envelope-flap"></span>
+          <span class="envelope-seal">♡</span>
+          <span class="envelope-bow">🎀</span>
+        </span>
+      </button>
+
+      <h1>A little surprise<br>for you <span>♡</span></h1>
+      <p class="welcome-message">Someone has something special for you...<br>Are you ready to open it?</p>
+      <button class="enter-button" id="enterButton">ENTER <span>♡</span></button>
+      <p class="made-with-love">Made with love, just for you <span>♡</span></p>
+    </div>
+  </main>
+
+  <!-- SECOND PAGE: birthday scrapbook (hidden until ENTER is clicked) -->
+  <main id="birthdayPage" class="birthday-page" hidden>
+    <header class="top-note">
+      <span>♡ A LITTLE WORLD MADE JUST FOR YOU ♡</span>
+    </header>
+
+    <section class="hero paper">
+      <span class="tape tape-top"></span>
+      <span class="cake-doodle">🎂</span>
+      <span class="hero-bow">🎀</span>
+      <p class="small-script">today is all about you</p>
+      <h2>Happy Birthday,<br>My Love! <span>♡</span></h2>
+      <div class="squiggle">〰 〰 〰</div>
+      <p class="birthday-wish">
+        Another year, another reason for me<br class="desktop-only">
+        to love you even more.<br><br>
+        I hope all your dreams come true,<br class="desktop-only">
+        and you always know that I'm here,<br class="desktop-only">
+        cheering for you in everything you do.<br><br>
+        You deserve all the happiness in the world ♡
+      </p>
+      <span class="tiny-heart">♡</span>
+    </section>
+
+    <section class="memories-section">
+      <div class="section-heading">
+        <span class="heading-flower">✿</span>
+        <h2>My Favourite Pictures</h2>
+        <p>A few little moments of my favourite person ♡</p>
+      </div>
+
+      <div class="polaroid-grid">
+        <figure class="polaroid rotate-left">
+          <div class="photo-frame">
+            <img src="assets/photo1.jpg" alt="A favourite photo of you">
+            <span class="photo-placeholder">Add your photo<br>01 ♡</span>
+          </div>
+          <figcaption>my favourite smile ♡</figcaption>
+        </figure>
+        <figure class="polaroid rotate-right">
+          <div class="photo-frame">
+            <img src="assets/photo2.jpg" alt="Another favourite photo">
+            <span class="photo-placeholder">Add your photo<br>02 ♡</span>
+          </div>
+          <figcaption>the cutest boy</figcaption>
+        </figure>
+        <figure class="polaroid rotate-right-small">
+          <div class="photo-frame">
+            <img src="assets/photo3.jpg" alt="A special memory">
+            <span class="photo-placeholder">Add your photo<br>03 ♡</span>
+          </div>
+          <figcaption>a moment to keep</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="video-section paper">
+      <span class="tape tape-video"></span>
+      <div class="video-icon">🎞️</div>
+      <h2>Little Videos of You ♡</h2>
+      <p>Because pictures aren't enough!</p>
+      <div class="video-grid">
+        <div class="video-card">
+          <video controls playsinline preload="metadata" poster="">
+            <source src="assets/video1.mp4" type="video/mp4">
+            Your browser does not support video.
+          </video>
+          <span>little memory 01</span>
+        </div>
+        <div class="video-card">
+          <video controls playsinline preload="metadata">
+            <source src="assets/video2.mp4" type="video/mp4">
+            Your browser does not support video.
+          </video>
+          <span>little memory 02</span>
+        </div>
+      </div>
+      <p class="media-tip">Your videos will appear here once you add them to the assets folder.</p>
+    </section>
+
+    <section class="letter-section">
+      <div class="rose-doodle">🌷</div>
+      <article class="letter paper">
+        <span class="tape tape-letter"></span>
+        <p class="small-script">just a few words from me...</p>
+        <h2>A Letter For You <span>♡</span></h2>
+        <p class="letter-text">
+          Thank you for being in my life. I'm so grateful for your kindness,
+          your love, and for simply being you.<br><br>
+          Happy birthday, my love. I hope this year brings you more joy,
+          more success, and more reasons to smile. No matter what life brings,
+          I'll always be cheering for you.<br><br>
+          I love you, today and always. ♡
+        </p>
+        <p class="signature">with all my love, <span>♡</span></p>
+      </article>
+      <div class="love-stamp">I LOVE<br>YOU ♡</div>
+    </section>
+
+    <footer>made with lots of love, just for you ♡</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
