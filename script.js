@@ -23,18 +23,20 @@ let entered = false;
 
 
 // ======================================
-// 3. CONFETTI ANIMATION
+// 3. CONFETTI ANIMATION - BABY BLUE
 // ======================================
 
 function createConfetti() {
 
     const colors = [
-        "#F4A6C1",
-        "#FFFFFF",
-        "#F8D58A",
-        "#C8B5ED",
-        "#A9D9E8",
-        "#F5B7A5"
+        "#DCEEFF",  // Baby blue
+        "#B9D9F5",  // Soft blue
+        "#86B8DF",  // Pastel blue
+        "#5689B5",  // Deep baby blue
+        "#FFFFFF",  // White
+        "#E5F2FF",  // Ice blue
+        "#C5DDF3",  // Powder blue
+        "#A9CDEB"   // Sky blue
     ];
 
     for (let i = 0; i < 120; i++) {
@@ -46,7 +48,7 @@ function createConfetti() {
         // Random horizontal position
         piece.style.left = Math.random() * 100 + "%";
 
-        // Random colour
+        // Random baby blue colour
         piece.style.backgroundColor =
             colors[Math.floor(Math.random() * colors.length)];
 
@@ -108,7 +110,7 @@ async function enterBirthdaySurprise() {
         });
 
 
-        // Start confetti
+        // Start baby blue confetti
         createConfetti();
 
 
