@@ -7,7 +7,6 @@ const welcome = document.getElementById("welcome");
 const birthdayPage = document.getElementById("birthdayPage");
 
 const openEnvelope = document.getElementById("openEnvelope");
-const enterButton = document.getElementById("enterButton");
 
 const bgMusic = document.getElementById("bgMusic");
 const musicToggle = document.getElementById("musicToggle");
@@ -89,9 +88,7 @@ async function enterBirthdaySurprise() {
     // Open envelope animation
     openEnvelope.classList.add("opening");
 
-    enterButton.disabled = true;
-
-    enterButton.textContent = "BUKA KEJUTANNYA... ♡";
+    openEnvelope.disabled = true;
 
 
     // Wait for envelope animation
@@ -106,7 +103,7 @@ async function enterBirthdaySurprise() {
         // Start from the top
         window.scrollTo({
             top: 0,
-            behavior: "instant"
+            behavior: "auto"
         });
 
 
@@ -137,15 +134,12 @@ async function enterBirthdaySurprise() {
 
 
 // ======================================
-// 5. ENVELOPE AND ENTER BUTTON
+// 5. ENVELOPE CLICK EVENT
 // ======================================
 
-openEnvelope.addEventListener(
-    "click",
-    enterBirthdaySurprise
-);
+// Only clicking the envelope opens the birthday page
 
-enterButton.addEventListener(
+openEnvelope.addEventListener(
     "click",
     enterBirthdaySurprise
 );
@@ -168,6 +162,8 @@ musicToggle.addEventListener("click", async () => {
         } catch (error) {
 
             console.log("Unable to play music:", error);
+
+            musicToggle.textContent = "♫ Play Music";
 
         }
 
