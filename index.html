@@ -1,140 +1,411 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#f9dce7">
-  <title>Selamat Ulang Tahun Sayang ♡ </title>
+
+  <title>Selamat Ulang Tahun Sayang ♡</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <!-- FIRST PAGE: envelope welcome screen -->
+
+  <!-- CONFETTI CONTAINER -->
+  <div id="confetti-container"></div>
+
+
+  <!-- BACKGROUND MUSIC -->
+  <audio id="bgMusic" loop>
+    <source src="assets/birthday-instrumental.mp3" type="audio/mpeg">
+  </audio>
+
+
+  <!-- FIRST PAGE: ENVELOPE WELCOME SCREEN -->
   <main id="welcome" class="welcome-screen">
+
     <div class="welcome-decor decor-heart heart-one">♡</div>
     <div class="welcome-decor decor-heart heart-two">♡</div>
+
     <div class="welcome-decor sparkle sparkle-one">✧</div>
     <div class="welcome-decor sparkle sparkle-two">✦</div>
 
     <div class="welcome-content">
-      <p class="eyebrow">Hadiah kecil dariku untuk kamu</p>
-      <button class="envelope-button" id="openEnvelope" aria-label="Open your birthday letter">
+
+      <p class="eyebrow">
+        Hadiah kecil dariku untuk kamu
+      </p>
+
+      <button
+        class="envelope-button"
+        id="openEnvelope"
+        aria-label="Open your birthday letter">
+
         <span class="envelope">
+
           <span class="envelope-back"></span>
-          <span class="envelope-letter"><span>for you</span> ♡</span>
+
+          <span class="envelope-letter">
+            <span>for you</span> ♡
+          </span>
+
           <span class="envelope-front"></span>
+
           <span class="envelope-flap"></span>
+
           <span class="envelope-seal">♡</span>
+
           <span class="envelope-bow">🎀</span>
+
         </span>
+
       </button>
 
-      <h1>Eh ada apa ya ini ? ♡<br><span></span></h1>
-      <p class="welcome-message">Ada sesuatu dari mba buat sayang...<br>Are you ready sayang ? </p>
-      <button class="enter-button" id="enterButton">MASUK CINII CINTAKUU <span>♡</span></button>
-      <p class="made-with-love">Dibuat dengan penuh kasih sayang, hanya untuk mas heri <span>♡</span></p>
+
+      <h1>
+        Eh ada apa ya ini ? ♡<br>
+        <span></span>
+      </h1>
+
+      <p class="welcome-message">
+        Ada sesuatu dari mba buat sayang...<br>
+        Are you ready sayang ?
+      </p>
+
+      <button class="enter-button" id="enterButton">
+        MASUK CINII CINTAKUU <span>♡</span>
+      </button>
+
+      <p class="made-with-love">
+        Dibuat dengan penuh kasih sayang,
+        hanya untuk mas heri <span>♡</span>
+      </p>
+
     </div>
+
   </main>
 
-  <!-- SECOND PAGE: birthday scrapbook (hidden until ENTER is clicked) -->
+
+
+  <!-- SECOND PAGE: BIRTHDAY SURPRISE -->
   <main id="birthdayPage" class="birthday-page" hidden>
+
+
+    <!-- MUSIC CONTROL -->
+    <button id="musicToggle" class="music-toggle">
+      ♫ Music ON
+    </button>
+
+
+    <!-- FLOATING CINNAMOROLL -->
+    <div class="floating-character cinnamoroll">
+      <img
+        src="assets/cinnamoroll.gif"
+        alt="Cinnamoroll">
+    </div>
+
+
+    <!-- FLOATING MY MELODY -->
+    <div class="floating-character mymelody">
+      <img
+        src="assets/mymelody.gif"
+        alt="My Melody">
+    </div>
+
+
+
+    <!-- HEADER -->
     <header class="top-note">
       <span>♡ Ultah-26 MAS HERI FAUZI ♡</span>
     </header>
 
+
+
+    <!-- BIRTHDAY GREETING -->
     <section class="hero paper">
+
       <span class="tape tape-top"></span>
+
       <span class="cake-doodle">🎂</span>
+
       <span class="hero-bow">🎀</span>
-      <p class="small-script">Hari ini semuanya tentang kamu</p>
-      <h2>Happy Birthday Sayangku,<br>Heri Fauzi! <span>♡</span></h2>
-      <div class="squiggle">〰 〰 〰</div>
+
+      <p class="small-script">
+        Hari ini semuanya tentang kamu
+      </p>
+
+      <h2>
+        Happy Birthday Sayangku,<br>
+        Heri Fauzi! <span>♡</span>
+      </h2>
+
+      <div class="squiggle">
+        〰 〰 〰
+      </div>
 
       <p class="birthday-wish">
-        Ayooo sayang scroll ke bawah bentar yaaa, MWAHHH ♡ <br class="desktop-only">
+        Ayooo sayang scroll ke bawah bentar yaaa,
+        MWAHHH ♡
+        <br class="desktop-only">
       </p>
-      
+
       <span class="tiny-heart">♡</span>
+
     </section>
 
+
+
+    <!-- PHOTO GALLERY -->
     <section class="memories-section">
+
       <div class="section-heading">
+
         <span class="heading-flower">✿</span>
-        <h2>Foto favorit saya dari Si Ganteng</h2>
-        <p> Alamakk gantenggnaaa sayangg acuuu ♡</p>
+
+        <h2>
+          Foto favorit saya dari Si Ganteng
+        </h2>
+
+        <p>
+          Alamakk gantenggnaaa sayangg acuuu ♡
+        </p>
+
       </div>
+
 
       <div class="polaroid-grid">
+
+
+        <!-- PHOTO 1 -->
         <figure class="polaroid rotate-left">
+
           <div class="photo-frame">
-            <img src="assets/photo1.jpg" alt="A favourite photo of you">
-            <span class="photo-placeholder">Add your photo<br>01 ♡</span>
+
+            <img
+              src="assets/photo1.jpg"
+              alt="A favourite photo of you">
+
+            <span class="photo-placeholder">
+              Add your photo<br>01 ♡
+            </span>
+
           </div>
-          <figcaption>senyumnyaa euyy ♡</figcaption>
+
+          <figcaption>
+            senyumnyaa euyy ♡
+          </figcaption>
+
         </figure>
+
+
+
+        <!-- PHOTO 2 -->
         <figure class="polaroid rotate-right">
+
           <div class="photo-frame">
-            <img src="assets/photo2.jpg" alt="Another favourite photo">
-            <span class="photo-placeholder">Add your photo<br>02 ♡</span>
+
+            <img
+              src="assets/photo2.jpg"
+              alt="Another favourite photo">
+
+            <span class="photo-placeholder">
+              Add your photo<br>02 ♡
+            </span>
+
           </div>
-          <figcaption>wihh keren sayangkuu</figcaption>
+
+          <figcaption>
+            wihh keren sayangkuu
+          </figcaption>
+
         </figure>
+
+
+
+        <!-- PHOTO 3 -->
         <figure class="polaroid rotate-right-small">
+
           <div class="photo-frame">
-            <img src="assets/photo3.jpg" alt="A special memory">
-            <span class="photo-placeholder">Add your photo<br>03 ♡</span>
+
+            <img
+              src="assets/photo3.jpg"
+              alt="A special memory">
+
+            <span class="photo-placeholder">
+              Add your photo<br>03 ♡
+            </span>
+
           </div>
-          <figcaption>ehem 08 berapa ya ? </figcaption>
+
+          <figcaption>
+            ehem 08 berapa ya ?
+          </figcaption>
+
         </figure>
+
+
       </div>
+
     </section>
 
+
+
+    <!-- VIDEO SECTION -->
     <section class="video-section paper">
-      <span class="tape tape-video"></span>
-      <div class="video-icon">🎞️</div>
-      <h2>Video pendek untuk Sayangku ♡</h2>
-      <p>Terlalu ganteng makanya bikin video hehe</p>
-      <div class="video-grid">
-        <div class="video-card">
-          <video controls playsinline preload="metadata" poster="">
-            <source src="assets/video1.mp4" type="video/mp4">
-            Your browser does not support video.
-          </video>
-          <span>♡ 01</span>  
-        </div>
-        <div class="video-card">
-          <video controls playsinline preload="metadata">
-            <source src="assets/video2.mp4" type="video/mp4">
-            Your browser does not support video.
-          </video>
-          <span>♡ 02</span>
-        </div>
-      </div>
-       
 
+      <span class="tape tape-video"></span>
+
+      <div class="video-icon">
+        🎞️
+      </div>
+
+      <h2>
+        Video pendek untuk Sayangku ♡
+      </h2>
+
+      <p>
+        Terlalu ganteng makanya bikin video hehe
+      </p>
+
+
+      <div class="video-grid">
+
+
+        <!-- VIDEO 1 -->
+        <div class="video-card">
+
+          <video controls playsinline preload="metadata">
+
+            <source
+              src="assets/video1.mp4"
+              type="video/mp4">
+
+            Your browser does not support video.
+
+          </video>
+
+          <span>♡ 01</span>
+
+        </div>
+
+
+
+        <!-- VIDEO 2 -->
+        <div class="video-card">
+
+          <video controls playsinline preload="metadata">
+
+            <source
+              src="assets/video2.mp4"
+              type="video/mp4">
+
+            Your browser does not support video.
+
+          </video>
+
+          <span>♡ 02</span>
+
+        </div>
+
+
+      </div>
+
+    </section>
+    <!-- END VIDEO SECTION -->
+
+
+
+    <!-- LOVE LETTER SECTION -->
     <section class="letter-section">
-      <div class="rose-doodle">🌷</div>
+
+      <div class="rose-doodle">
+        🌷
+      </div>
+
+
       <article class="letter paper">
+
         <span class="tape tape-letter"></span>
-        <p class="small-script">sedikit ucapan dari jodoh kamu...</p>
-        <h2>Surat pendek buat sayang <span>♡</span></h2>
-        <p class="letter-text">
-          Halo cintaku duniaku, Selamat Ulang Tahun sayang ! Alhamdulillah dengan izin Allah bertambah juga umurnya di tahun ini, semoga sayang selalu dalam lindungan Allah, semoga juga dimurahkan rezekinyaa dikurniakan kesihatan yang baik dan dipermudahkan segala urusannya di dunia dan di akhirat nanti.<br><br>
-          Sekali lagi Selamat Ulang Tahun cintaku, mba harap di usia yang baru ini sayang akan lebih happy dan bahagia yaa, nikmatilah hari ini karna hari ini special buat sayang.
-          Tidak kira apa pun yang datang di hidup sayang,mba akan selalu ada dengan sayang dan akan selalu membantu sayang sebisa mba.
-          Maafin mba karna belum dapat berikan sayang hadiah yang besar di hari ultah sayang, mba harap sayang suka hadiah kecil dari mba ini. Insyaallah sayang kalau diberikan peluang dan rezeki mba akan ketemu sayang dan berikan hadiah yang lebih baik lagiii <br><br>
-          I love you and will always love you sampai ke syurga sayang ♡
+
+        <p class="small-script">
+          sedikit ucapan dari jodoh kamu...
         </p>
-        <p class="signature">your love, Aireen <span>♡</span></p>
+
+        <h2>
+          Surat pendek buat sayang <span>♡</span>
+        </h2>
+
+
+        <p class="letter-text">
+
+          Halo cintaku duniaku, Selamat Ulang Tahun sayang !
+
+          Alhamdulillah dengan izin Allah bertambah juga umurnya
+          di tahun ini, semoga sayang selalu dalam lindungan Allah,
+          semoga juga dimurahkan rezekinyaa dikurniakan kesihatan
+          yang baik dan dipermudahkan segala urusannya di dunia
+          dan di akhirat nanti.
+
+          <br><br>
+
+          Sekali lagi Selamat Ulang Tahun cintaku, mba harap
+          di usia yang baru ini sayang akan lebih happy dan bahagia yaa,
+          nikmatilah hari ini karna hari ini special buat sayang.
+
+          Tidak kira apa pun yang datang di hidup sayang,
+          mba akan selalu ada dengan sayang dan akan selalu
+          membantu sayang sebisa mba.
+
+          Maafin mba karna belum dapat berikan sayang hadiah
+          yang besar di hari ultah sayang, mba harap sayang suka
+          hadiah kecil dari mba ini.
+
+          Insyaallah sayang kalau diberikan peluang dan rezeki
+          mba akan ketemu sayang dan berikan hadiah yang
+          lebih baik lagiii
+
+          <br><br>
+
+          I love you and will always love you
+          sampai ke syurga sayang ♡
+
+        </p>
+
+
+        <p class="signature">
+          your love, Aireen <span>♡</span>
+        </p>
+
       </article>
-      <div class="love-stamp">I LOVE<br>YOU ♡</div>
+
+
+      <div class="love-stamp">
+        I LOVE<br>
+        YOU ♡
+      </div>
+
     </section>
 
-    <footer>made with lots of love, just for you ♡</footer>
+
+
+    <!-- FOOTER -->
+    <footer>
+      made with lots of love, just for you ♡
+    </footer>
+
+
   </main>
 
+
+  <!-- JAVASCRIPT -->
   <script src="script.js"></script>
+
 </body>
 </html>
