@@ -711,10 +711,16 @@ footer {
    BACKGROUND MUSIC BUTTON
 ========================================= */
 
+
+
 .music-toggle {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
+  top: 12px;
+  right: 12px;
+  bottom: auto;
+  padding: 9px 13px;
+  font-size: 11px;
+}
+
   z-index: 1000;
 
   border: 2px solid #A9CDEB;
@@ -742,6 +748,7 @@ footer {
 .music-toggle:active {
   transform: scale(0.95);
 }
+
 
 /* =========================================
    MOBILE RESPONSIVE DESIGN
