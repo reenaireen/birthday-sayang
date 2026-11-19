@@ -7,6 +7,7 @@ const welcome = document.getElementById("welcome");
 const birthdayPage = document.getElementById("birthdayPage");
 
 const openEnvelope = document.getElementById("openEnvelope");
+const enterButton = document.getElementById("enterButton");
 
 const bgMusic = document.getElementById("bgMusic");
 const musicToggle = document.getElementById("musicToggle");
@@ -28,14 +29,14 @@ let entered = false;
 function createConfetti() {
 
     const colors = [
-        "#DCEEFF",  // Baby blue
-        "#B9D9F5",  // Soft blue
-        "#86B8DF",  // Pastel blue
-        "#5689B5",  // Deep baby blue
-        "#FFFFFF",  // White
-        "#E5F2FF",  // Ice blue
-        "#C5DDF3",  // Powder blue
-        "#A9CDEB"   // Sky blue
+        "#DCEEFF",
+        "#B9D9F5",
+        "#86B8DF",
+        "#5689B5",
+        "#FFFFFF",
+        "#E5F2FF",
+        "#C5DDF3",
+        "#A9CDEB"
     ];
 
     for (let i = 0; i < 120; i++) {
@@ -44,27 +45,22 @@ function createConfetti() {
 
         piece.classList.add("confetti");
 
-        // Random horizontal position
         piece.style.left = Math.random() * 100 + "%";
 
-        // Random baby blue colour
         piece.style.backgroundColor =
             colors[Math.floor(Math.random() * colors.length)];
 
-        // Random animation speed
         piece.style.animationDelay =
             Math.random() * 2 + "s";
 
         piece.style.animationDuration =
             (3 + Math.random() * 3) + "s";
 
-        // Random shape
         piece.style.borderRadius =
             Math.random() > 0.5 ? "50%" : "2px";
 
         confettiContainer.appendChild(piece);
 
-        // Remove confetti after animation
         setTimeout(() => {
             piece.remove();
         }, 7000);
@@ -80,16 +76,16 @@ function createConfetti() {
 
 async function enterBirthdaySurprise() {
 
-    // Prevent clicking multiple times
     if (entered) return;
 
     entered = true;
 
+    // Disable both buttons
+    openEnvelope.disabled = true;
+    enterButton.disabled = true;
+
     // Open envelope animation
     openEnvelope.classList.add("opening");
-
-    openEnvelope.disabled = true;
-
 
     // Wait for envelope animation
     window.setTimeout(async () => {
@@ -100,16 +96,14 @@ async function enterBirthdaySurprise() {
         // Show birthday page
         birthdayPage.hidden = false;
 
-        // Start from the top
+        // Scroll to top
         window.scrollTo({
             top: 0,
             behavior: "auto"
         });
 
-
-        // Start baby blue confetti
+        // Baby blue confetti
         createConfetti();
-
 
         // Start background music
         bgMusic.volume = 0.35;
@@ -137,8 +131,6 @@ async function enterBirthdaySurprise() {
 // 5. ENVELOPE CLICK EVENT
 // ======================================
 
-// Only clicking the envelope opens the birthday page
-
 openEnvelope.addEventListener(
     "click",
     enterBirthdaySurprise
@@ -146,7 +138,17 @@ openEnvelope.addEventListener(
 
 
 // ======================================
-// 6. MUSIC ON / OFF BUTTON
+// 6. ENTER BUTTON CLICK EVENT
+// ======================================
+
+enterButton.addEventListener(
+    "click",
+    enterBirthdaySurprise
+);
+
+
+// ======================================
+// 7. MUSIC ON / OFF BUTTON
 // ======================================
 
 musicToggle.addEventListener("click", async () => {
